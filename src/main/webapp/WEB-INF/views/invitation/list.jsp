@@ -247,7 +247,7 @@
                   </div>
                   <div class="modal-body">
                      <p id="messageContent"></p>
-                     <div>
+                     <div style="text-align: center;">
                         <button class="btn btn-primary" id="editBtn" data-mno="${message.mno}" data-guestpw="${message.guestpw}">수정</button>
                         <button id="deleteBtn" class="btn btn-danger">삭제</button>
                         <button id="listBtn" class="btn btn-secondary">목록으로</button>
@@ -395,7 +395,7 @@ $(document).ready(function(){
         console.log("댓글 내용:", comments);
 
         commentsService.add(comments, function (result) {
-            alert(result);
+            alert("답글이 등록되었습니다.");
 
             modal.find("input").val("");
             modal.modal("hide");
